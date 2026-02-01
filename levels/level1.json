@@ -1,1 +1,12 @@
-
+{
+  "levelNumber": 1,
+  "speed": 3,
+  "treeSpeed": 1.2,
+  "roadSpeed": 4,
+  "barSpeed": 2,
+  "lighting": "bright_day",
+  "vibe": "smooth_cruise",
+  "music": "lofi_sunrise",
+  "difficulty": "easy",
+  "notes": "Intro level. Clean forward motion. No obstacles."
+}
