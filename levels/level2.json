@@ -1,1 +1,12 @@
-
+{
+  "levelNumber": 2,
+  "speed": 3.5,
+  "treeSpeed": 1.4,
+  "roadSpeed": 4.5,
+  "barSpeed": 2.2,
+  "lighting": "golden_hour",
+  "vibe": "cinematic_glide",
+  "music": "sunset_chill",
+  "difficulty": "easy_plus",
+  "notes": "Slightly faster. More cinematic. Still no obstacles."
+}
