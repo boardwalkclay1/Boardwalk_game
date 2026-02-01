@@ -1,92 +1,56 @@
-body {
-    margin: 0;
-    overflow: hidden;
-    background: #87CEEB;
-    font-family: Arial, sans-serif;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Longboard Dance Game</title>
+<link rel="stylesheet" href="styles.css">
+</head>
 
-/* LOADING SCREEN */
-#loadingScreen {
-    position: fixed;
-    top: 0; left: 0;
-    width: 100%; height: 100%;
-    background: black;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    z-index: 10;
-}
+<body>
 
-#loadingImg {
-    width: 200px;
-    animation: bounce 1.5s infinite;
-}
+<!-- ============================
+     LOADING SCREEN (CSS ONLY)
+============================ -->
+<div id="loadingScreen">
+    <div class="longboardLoader"></div>
+    <p id="loadingText">Loading...</p>
+</div>
 
-@keyframes bounce {
-    0% { transform: translateY(0); }
-    50% { transform: translateY(-20px); }
-    100% { transform: translateY(0); }
-}
+<!-- ============================
+     START SCREEN (CSS BUTTON)
+============================ -->
+<div id="startScreen">
+    <h1>Longboard Dance Game</h1>
+    <div id="startBtn" class="startBtnCSS">START GAME</div>
+</div>
 
-#loadingText {
-    color: white;
-    margin-top: 20px;
-    font-size: 24px;
-}
+<!-- ============================
+     GAME CANVAS
+============================ -->
+<canvas id="gameCanvas"></canvas>
 
-/* START SCREEN */
-#startScreen {
-    position: fixed;
-    top: 0; left: 0;
-    width: 100%; height: 100%;
-    background: linear-gradient(#87CEEB, #ffffff);
-    display: none;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    z-index: 9;
-}
+<!-- ============================
+     MOBILE GHOST BUTTONS
+============================ -->
+<div id="mobileControls">
+    <div class="btnGroup">
+        <div class="ghostBtn" id="btnLeft">←</div>
+        <div class="ghostBtn" id="btnRight">→</div>
+    </div>
 
-#startBtn {
-    width: 200px;
-    margin-top: 20px;
-    cursor: pointer;
-}
+    <div class="btnGroup">
+        <div class="ghostBtn" id="btnUp">↑</div>
+        <div class="ghostBtn" id="btnDown">↓</div>
+        <div class="ghostBtn" id="btnA">A</div>
+        <div class="ghostBtn" id="btnS">S</div>
+    </div>
+</div>
 
-/* MOBILE CONTROLS */
-#mobileControls {
-    position: fixed;
-    bottom: 20px;
-    width: 100%;
-    display: none;
-    justify-content: space-between;
-    padding: 0 20px;
-    pointer-events: none;
-}
+<!-- ============================
+     GAME ENGINE
+============================ -->
+<script src="game.js"></script>
 
-.btnGroup {
-    display: flex;
-    gap: 15px;
-}
-
-.ghostBtn {
-    width: 70px;
-    height: 70px;
-    border-radius: 50%;
-    background: rgba(0,0,0,0.35);
-    border: 2px solid rgba(255,255,255,0.6);
-    pointer-events: auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    font-size: 22px;
-    user-select: none;
-    transition: transform 0.1s, background 0.1s;
-}
-
-.ghostBtn:active {
-    transform: scale(1.15);
-    background: rgba(255,255,255,0.25);
-}
+</body>
+</html>
