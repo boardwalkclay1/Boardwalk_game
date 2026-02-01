@@ -1,1 +1,12 @@
-
+{
+  "levelNumber": 3,
+  "speed": 4,
+  "treeSpeed": 1.6,
+  "roadSpeed": 5,
+  "barSpeed": 2.5,
+  "lighting": "warm_evening",
+  "vibe": "smooth_cinematic_forward",
+  "music": "evening_flow",
+  "difficulty": "medium",
+  "notes": "Forward motion feels deeper. Slight speed increase. Still clean."
+}
