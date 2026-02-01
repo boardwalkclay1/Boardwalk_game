@@ -8,8 +8,12 @@ body {
     font-family: Arial, sans-serif;
 }
 
+canvas {
+    display: block;
+}
+
 /* ============================
-   LOADING SCREEN
+   LOADING SCREEN (CSS Longboard)
 ============================ */
 #loadingScreen {
     position: fixed;
@@ -25,9 +29,32 @@ body {
     z-index: 10;
 }
 
-#loadingImg {
-    width: 200px;
+.longboardLoader {
+    width: 180px;
+    height: 40px;
+    border-radius: 20px;
+    background: linear-gradient(90deg, #444, #777);
+    position: relative;
     animation: bounce 1.5s infinite;
+}
+
+.longboardLoader::before,
+.longboardLoader::after {
+    content: "";
+    position: absolute;
+    width: 28px;
+    height: 28px;
+    background: #222;
+    border-radius: 50%;
+    bottom: -10px;
+}
+
+.longboardLoader::before {
+    left: 10px;
+}
+
+.longboardLoader::after {
+    right: 10px;
 }
 
 @keyframes bounce {
@@ -43,7 +70,7 @@ body {
 }
 
 /* ============================
-   START SCREEN
+   START SCREEN (CSS Button)
 ============================ */
 #startScreen {
     position: fixed;
@@ -65,21 +92,21 @@ body {
     margin-bottom: 20px;
 }
 
-#startBtn {
-    width: 200px;
+.startBtnCSS {
+    padding: 18px 40px;
+    background: #222;
+    color: white;
+    font-size: 28px;
+    border-radius: 12px;
+    border: 3px solid #fff;
     cursor: pointer;
-    transition: transform 0.2s;
+    transition: 0.2s;
+    box-shadow: 0 0 20px rgba(255,255,255,0.3);
 }
 
-#startBtn:hover {
+.startBtnCSS:hover {
     transform: scale(1.1);
-}
-
-/* ============================
-   CANVAS
-============================ */
-canvas {
-    display: block;
+    box-shadow: 0 0 30px rgba(255,255,255,0.6);
 }
 
 /* ============================
@@ -105,19 +132,21 @@ canvas {
     width: 70px;
     height: 70px;
     border-radius: 50%;
-    background: rgba(0,0,0,0.35);
-    border: 2px solid rgba(255,255,255,0.6);
+    background: rgba(0,0,0,0.45);
+    border: 2px solid rgba(255,255,255,0.7);
+    backdrop-filter: blur(4px);
     pointer-events: auto;
     display: flex;
     justify-content: center;
     align-items: center;
     color: white;
-    font-size: 22px;
+    font-size: 26px;
     user-select: none;
-    transition: transform 0.1s, background 0.1s;
+    transition: 0.15s;
 }
 
 .ghostBtn:active {
-    transform: scale(1.15);
+    transform: scale(1.2);
     background: rgba(255,255,255,0.25);
+    border-color: white;
 }
